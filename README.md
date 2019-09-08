@@ -5,7 +5,7 @@
 2. ssh in to the box ( ssh as root, then use the ssh key you created or use the root password mailed to your account).
 3. In a terminal: sudo apt update ; sudo apt upgrade -y ; sudo apt dist-upgrade -y ; sudo apt autoremove -y ; sudo reboot
 4. create for a new domain on domains.google.com or similar.  (eg. serveoish.com or similar).  
-5. Create a wild card record for the domain above to point to the ip address created by digital ocean.
+5. Create a wild card record ( * ) for the domain above to point to the ip address created by digital ocean.
 6. wget https://storage.googleapis.com/serveo/download/2018-05-08/serveo-linux-amd64 -O serveo 
 6a. This url is the 64 bit linux serveo.
 7. chmod 777 serveo
