@@ -1,7 +1,11 @@
 # serveo_local
 
-0. get a digital oceans account.  (This is only the site I used; you can use your own virtual machine provider.)
-1. Create a small ($5 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).  Other sites (such as amazon aws) could be used, but be sure to configure the firewall rules correctly.
+
+On a server:
+
+
+0. Get a digital oceans account.  (This is only the site I used; you can use your own virtual machine provider, like aws or similar, but you may need to perform additional configuration details not covered, such as firewall configuration or simlar.)
+1. Create a small ($5 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).  
 2. ssh in to the box ( ssh as root, then use the ssh key you created or use the root password mailed to your account).
 3. In a terminal: sudo apt update ; sudo apt upgrade -y ; sudo apt dist-upgrade -y ; sudo apt autoremove -y ; sudo reboot
 4. create for a new domain on domains.google.com or similar.  (eg. serveoish.com or similar).  
@@ -14,7 +18,7 @@
 9. ssh-keygen -t rsa -f ssh_host_rsa_key
 10. ./serveo --port=2222 -domian=serveoish.net
 10a. SHould result in something like: 2019/09/08 19:15:02 Listening on :2222...
-
+10b. Keep this window open while serveo runs.  Or use nohup ./serveo --port=2222 -domain=serveoish.net &
 
 In a client:
 
