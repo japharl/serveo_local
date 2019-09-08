@@ -17,6 +17,8 @@
 
 
 In a client:
+
+
 0. assume you have a web server installed.  (If not, see https://jameshfisher.com/2018/12/31/how-to-make-a-webserver-with-netcat-nc/ and follow the how to make a persistant server step )
 1. ssh serveoish.com -p 2222 -R 80:localhost:8000
 
