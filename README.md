@@ -1,7 +1,7 @@
 # serveo_local
 
-0. get a digital oceans account.  (This is only the site I used; you can use your own.)
-1. Create a small ($5 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).
+0. get a digital oceans account.  (This is only the site I used; you can use your own virtual machine provider.)
+1. Create a small ($5 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).  Other sites (such as amazon aws) could be used, but be sure to configure the firewall rules correctly.
 2. ssh in to the box ( ssh as root, then use the ssh key you created or use the root password mailed to your account).
 3. In a terminal: sudo apt update ; sudo apt upgrade -y ; sudo apt dist-upgrade -y ; sudo apt autoremove -y ; sudo reboot
 4. create for a new domain on domains.google.com or similar.  (eg. serveoish.com or similar).  
@@ -19,10 +19,13 @@
 In a client:
 0. assume you have a web server installed.  (If not, see https://jameshfisher.com/2018/12/31/how-to-make-a-webserver-with-netcat-nc/ and follow the how to make a persistant server step )
 1. ssh serveoish.com -p 2222 -R 80:localhost:8000
+
+You will see text like:
+
 Warning: no TLS certificate available for benigne.serveoish.com. You won't be able to use HTTPS, only HTTP.
 Forwarding HTTP traffic from http://benigne.serveoish.com
 Press g to start a GUI session and ctrl-c to quit.
 
-(Or use other appropriate ssh command here.)
+(Or use other appropriate ssh command here for a remote ssh tunnel or similar.)
 
 To shutdown serveo server, just press control c in the server window.
