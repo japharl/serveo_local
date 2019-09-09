@@ -1,5 +1,6 @@
 # serveo_local
 
+Serveo.net is a way to ssh and redirect ports on the internet. These are instructions to get your local copy of the server application running.
 
 On a server:
 
