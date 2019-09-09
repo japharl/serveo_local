@@ -16,15 +16,15 @@ On a server:
 8. ./serveo 
 8a. Should result in an "failed to load private key" error message.
 9. ssh-keygen -t rsa -f ssh_host_rsa_key
-10. ./serveo --port=2222 -domian=serveoish.net
-10a. SHould result in something like: 2019/09/08 19:15:02 Listening on :2222...
-10b. Keep this window open while serveo runs.  Or use nohup ./serveo --port=2222 -domain=serveoish.net &
+10. ./serveo --port=2222 -domain=serveoish.com
+10a. Should result in something like: 2019/09/08 19:15:02 Listening on :2222...
+10b. Keep this window open while serveo runs.  Or use nohup ./serveo --port=2222 -domain=serveoish.com &
 
 In a client:
 
 
 0. assume you have a web server installed.  (If not, see https://jameshfisher.com/2018/12/31/how-to-make-a-webserver-with-netcat-nc/ and follow the how to make a persistant server step )
-1. ssh serveoish.com -p 2222 -R 80:localhost:8000
+1. ssh <digitalocean ip> -p 2222 -R 80:localhost:8000
 
 You will see text like:
 
