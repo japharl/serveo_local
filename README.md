@@ -1,9 +1,8 @@
 # serveo_local
 
-Serveo.net is a way to ssh and redirect ports on the internet. These are instructions to get your local copy of the server application running.
+Serveo.net is a way to ssh and redirect ports on the internet. These are instructions to get your local copy of the serveo server application running, which is not depedent upon serveo.net.
 
 On a server:
-
 
 0. Get a digital oceans account.  (This is only the site I used; you can use your own virtual machine provider, like aws or similar, but you may need to perform additional configuration details not covered, such as firewall configuration or simlar.)
 1. Create a small ($5 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).  
