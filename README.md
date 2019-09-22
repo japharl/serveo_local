@@ -22,7 +22,8 @@ On a server:
 
 In a client:
 
-0. assume you have a web server installed.  (If not, see https://jameshfisher.com/2018/12/31/how-to-make-a-webserver-with-netcat-nc/ and follow the how to make a persistant server step )
+0. assume you have a web server installed.  (If not, see https://jameshfisher.com/2018/12/31/how-to-make-a-webserver-with-netcat-nc/ and follow the how to make a persistant server step below:
+0a. orrrr...:  python -m SimpleHTTPServer
 1. ssh <digitalocean ip> -p 2222 -R 80:localhost:8000
 
 You will see text like:
@@ -34,3 +35,5 @@ Press g to start a GUI session and ctrl-c to quit.
 (Or use other appropriate ssh command here for a remote ssh tunnel or similar.)
 
 To shutdown serveo server, just press control c in the server window.
+
+# https configuration
