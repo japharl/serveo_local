@@ -35,5 +35,3 @@ Press g to start a GUI session and ctrl-c to quit.
 (Or use other appropriate ssh command here for a remote ssh tunnel or similar.)
 
 To shutdown serveo server, just press control c in the server window.
-
-# https configuration
