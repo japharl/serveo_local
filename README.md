@@ -35,3 +35,21 @@ Press g to start a GUI session and ctrl-c to quit.
 (Or use other appropriate ssh command here for a remote ssh tunnel or similar.)
 
 To shutdown serveo server, just press control c in the server window.
+
+# To enable https via lets encrypt with gooogle domains as the provider:
+
+0. Get the above code working correctly without https certificates. :)
+1. Install certbot 
+1a. wget https://dl.eff.org/certbot-auto
+1b. chmod a+x ./certbot-auto
+1c. sudo ./certbot-auto 
+1ca. You'll be asked to type Y to further download required packages.
+1d. reboot
+2. Due to the complicated nature of setting up google dns, check out https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars to move the dns settings from google to digital ocean (or other providers).  This is because the procedure for dns configuring is easier than google.  (Essentialy point your domain dns servers to digital oceans.)
+3. Go to the digital ocean webpage, go down to the api section (furthest down on the left hand menu), and create a token.
+4. generate a new token.  Ensure it has write and read access.  The token will be displayed on the api page listing, copy that string (about 32 character string) and put it aside in a text file on the ssh server, creating a new file called api.ini.
+<pre>
+dns_digitalocean_token=(string)
+</pre>
+5. chmod 600 ./api.ini
+5. Then try: certbot --test --certificate 
