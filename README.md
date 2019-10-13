@@ -38,15 +38,24 @@ To shutdown serveo server, just press control c in the server window.
 
 # To enable https via lets encrypt with gooogle domains as the provider:
 
+# NOTE - THE FOLLOWING STEPS ARE NOT WORKING YET; THEY WILL BE UPDATED NEXT WEEKEND. # 
+
 0. Get the above code working correctly without https certificates. :)
 1. Install certbot 
-1a. sudo apt install certbot
+1a.sudo apt-get update
+1b. sudo apt-get install software-properties-common
+1c. sudo add-apt-repository universe
+1d. sudo add-apt-repository ppa:certbot/certbot
+1e. sudo apt-get update
+1f. sudo apt install certbot
 1b. reboot
-2. Due to the complicated nature of setting up google dns, check out https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars to move the dns settings from google to digital ocean (or other providers).  This is because the procedure for dns configuring is easier than google.  (Essentialy point your domain dns servers to digital oceans.)
+2.Due to the complicated nature of setting up google dns, check out https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars to move the dns settings from google to digital ocean (or other providers).  This is because the procedure for dns configuring is easier than google.  (Essentialy point your domain dns servers to digital oceans.)
 3. Go to the digital ocean webpage, go down to the api section (furthest down on the left hand menu), and create a token.
 4. generate a new token.  Ensure it has write and read access.  The token will be displayed on the api page listing, copy that string (about 32 character string) and put it aside in a text file on the ssh server, creating a new file called api.ini.
 <pre>
 dns_digitalocean_token=(string)
 </pre>
 5. chmod 600 ./api.ini
-5. Then try: certbot --test --certificate 
+6. sudo apt install python-pip
+7. sudo pip install certbot-dns-digitalocean
+8. ./test.sh 
