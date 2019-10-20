@@ -53,4 +53,4 @@ dns_digitalocean_token=(string)
 5. chmod 600 ./api.ini
 6. sudo apt install python-pip -y
 7. sudo pip install certbot-dns-digitalocean
-8. ./test.sh 
+# the above doesn't work yet.  Getting unexpected version error mismatch.
