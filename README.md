@@ -44,7 +44,7 @@ To shutdown serveo server, just press control c in the server window.
 6. sudo apt-get update
 7. sudo apt install certbot
 8. reboot
-9.Due to the complicated nature of setting up google dns, check out https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars to move the dns settings from google to digital ocean (or other providers).  This is because the procedure for dns configuring is easier than google.  (Essentialy point your domain dns servers to digital oceans.)
+9. Due to the complicated nature of setting up google dns, check out https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars to move the dns settings from google to digital ocean (or other providers).  This is because the procedure for dns configuring is easier than google.  (Essentialy point your domain dns servers to digital oceans.)
 10. Go to the digital ocean webpage, go down to the api section (furthest down on the left hand menu), and create a token.
 11. generate a new token.  Ensure it has write and read access.  The token will be displayed on the api page listing, copy that string (about 32 character string) and put it aside in a text file on the ssh server, creating a new file called api.ini.
 <pre>
@@ -52,5 +52,6 @@ dns_digitalocean_token=(string)
 </pre>
 5. chmod 600 ./api.ini
 6. sudo apt install python-pip -y
-7. sudo pip install certbot-dns-digitalocean
-# the above doesn't work yet.  Getting unexpected version error mismatch.
+7. sudo python -m pip install -U pip
+8. sudo pip install certbot-dns-digitalocean --upgrade cryptography
+9. -- pending ..
