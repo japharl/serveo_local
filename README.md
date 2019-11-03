@@ -1,4 +1,4 @@
-# serveo_local
+# serveo_local - no https
 
 Serveo.net is a way to ssh and redirect ports on the internet. These are instructions to get your local copy of the serveo server application running, which is not depedent upon serveo.net.
 
@@ -35,14 +35,14 @@ To shutdown serveo server, just press control c in the server window.
 
 # To enable https via lets encrypt with gooogle domains as the provider:
 
-0. Get the above code working correctly without https certificates. :)
-1. The steps 2-8 will install certbot 
+0. Perform steps 1-6 above in the no-https section.
+1. The steps 2-8 below will install certbot, which is required for wildcard support. 
 2. sudo apt-get update
 3. sudo apt-get install software-properties-common
 4. sudo add-apt-repository universe
 5. sudo add-apt-repository ppa:certbot/certbot
 6. sudo apt-get update
-7. sudo apt install certbot
+7. sudo apt install certbot -y
 8. reboot
 9. Due to the complicated nature of setting up google dns, check out https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars to move the dns settings from google to digital ocean (or other providers).  This is because the procedure for dns configuring is easier than google.  (Essentialy point your domain dns servers to digital oceans.)
 10. Go to the digital ocean webpage, go down to the api section (furthest down on the left hand menu), and create a token.
@@ -54,4 +54,6 @@ dns_digitalocean_token=(string)
 6. sudo apt install python-pip -y
 7. sudo python -m pip install -U pip
 8. sudo pip install certbot-dns-digitalocean --upgrade cryptography
-9. -- pending ..
+9. certbot certonly --dry-run --cert-name=zakz.xyz
+10. You will be prompted to select how you want to authenticate.  Select option 1.
+11. 
