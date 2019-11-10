@@ -35,7 +35,7 @@ To shutdown serveo server, just press control c in the server window.
 
 # To enable https via lets encrypt with gooogle domains as the provider:
 
-0. Perform steps 1-8 above in the no-https section.  We are then going to install acme.sh 
+0. Perform steps 1-9 above in the no-https section.  We are then going to install acme.sh 
 1. curl https://get.acme.sh | sh
 2. sudo apt install socat 
 3. On the digital ocean screen, go to Manage -> api.
