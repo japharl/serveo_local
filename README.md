@@ -35,6 +35,8 @@ To shutdown serveo server, just press control c in the server window.
 
 # To enable https via lets encrypt with gooogle domains as the provider:
 
+Does not seem to be working... Looks like serveo isn't recognizing the certs provided by acme...
+
 0. Perform steps 1-9 above in the no-https section.  We are then going to install acme.sh 
 1. curl https://get.acme.sh | sh
 2. sudo apt install socat 
