@@ -20,7 +20,7 @@ On a server:
 In a client:
 
 1. assume you have a web server installed.  (If not, see https://jameshfisher.com/2018/12/31/how-to-make-a-webserver-with-netcat-nc/ and follow the how to make a persistant server step below , orrrr...:  python -m SimpleHTTPServer
-2. ssh <digitalocean ip> -p 2222 -R 80:localhost:8000
+2. ssh <digitalocean ip> -p 2222 -R 80:localhost:8000 serveoish.com
 
 You will see text like:
 <pre>
