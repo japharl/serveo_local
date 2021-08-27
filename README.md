@@ -5,7 +5,7 @@ Serveo.net is a way to ssh and redirect ports on the internet. These are instruc
 On a server:
 
 0. Get a digital oceans account.  (This is only the site I used; you can use your own virtual machine provider, like aws or similar, but you may need to perform additional configuration details not covered, such as firewall configuration or simlar.)
-1. Create a small ($5 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).  
+1. Create a small ($4 / month) ubuntu dropplet.  (Optional https://m.do.co/c/674f3906831a referal link).  
 2. ssh in to the box ( ssh as root, then use the ssh key you created or use the root password mailed to your account).
 3. In a terminal: sudo apt update ; sudo apt upgrade -y ; sudo apt dist-upgrade -y ; sudo apt autoremove -y ; sudo reboot
 4. create for a new domain on domains.google.com or similar.  (eg. serveoish.com or similar).  
